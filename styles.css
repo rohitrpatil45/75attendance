@@ -11,7 +11,7 @@ body {
 
 }
 
-.main-class{
+.main-class {
   background: var(--bg-color);
   height: 100vh;
 }
@@ -72,7 +72,8 @@ strong {
   color: var(--text-color);
 }
 
-#present-input ,#total-input{
+#present-input,
+#total-input {
   background: var(--bg-color);
 }
 
@@ -173,7 +174,7 @@ strong {
   border-top-right-radius: 3px;
   border-bottom-right-radius: 3px;
   padding: 0 0.5rem;
-  color:var(--text-color);
+  color: var(--text-color);
 }
 
 .percentage-select:focus {
@@ -310,9 +311,9 @@ strong {
 .symbols-container {
   display: flex;
   gap: 8px;
-  padding: 2px  ;
+  padding: 2px;
   background: var(--bg-color);
-/* background: pink; */
+  /* background: pink; */
 }
 
 .heading-container {

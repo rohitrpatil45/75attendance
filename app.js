@@ -16,7 +16,7 @@ if (currentTheme === 'dark') {
   icon.classList.add('fa-sun');
 }
 
-toggleButton.addEventListener('click', function() {
+toggleButton.addEventListener('click', function () {
   document.body.classList.toggle('dark-mode');
 
   if (document.body.classList.contains('dark-mode')) {
@@ -35,7 +35,7 @@ btn.addEventListener("click", () => {
   let present = parseInt(presentInput.value);
   let total = parseInt(totalInput.value);
   let percentage = parseInt(percentageSelect.value);
-  
+
   if (isNaN(present) || isNaN(total) || isNaN(percentage)) {
     return (outputDiv.innerText = "Proper values please ¯\\_(ツ)_/¯");
   }
@@ -74,8 +74,7 @@ const daysToBunkText = (daysAvailableToBunk, present, total) =>
   `You can bunk for <strong>${daysAvailableToBunk}</strong> more days.<br>Current Attendance: <strong>${present}/${total}</strong> -> <strong>${(
     (present / total) *
     100
-  ).toFixed(2)}%</strong><br>Attendance Then: <strong>${present}/${
-    daysAvailableToBunk + total
+  ).toFixed(2)}%</strong><br>Attendance Then: <strong>${present}/${daysAvailableToBunk + total
   }</strong> -> <strong>${(
     (present / (daysAvailableToBunk + total)) *
     100
@@ -85,8 +84,7 @@ const daysToAttendClassText = (attendanceNeeded, present, total, percentage) =>
   `You need to attend <strong>${attendanceNeeded}</strong> more classes to attain ${percentage}% attendance<br>Current Attendance: <strong>${present}/${total}</strong> ->  <strong>${(
     (present / total) *
     100
-  ).toFixed(2)}%</strong><br>Attendance Required: <strong>${
-    attendanceNeeded + present
+  ).toFixed(2)}%</strong><br>Attendance Required: <strong>${attendanceNeeded + present
   }/${attendanceNeeded + total}</strong> -> <strong>${(
     ((attendanceNeeded + present) / (attendanceNeeded + total)) *
     100
