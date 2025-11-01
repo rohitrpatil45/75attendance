@@ -4,6 +4,32 @@ const totalInput = document.getElementById("total-input");
 const btn = document.getElementById("btn");
 const outputDiv = document.getElementById("output-div");
 const banner = document.getElementById("banner");
+const toggleButton = document.getElementById('theme-toggle');
+const icon = toggleButton.querySelector('i');
+
+
+const currentTheme = localStorage.getItem('theme') || 'light';
+
+if (currentTheme === 'dark') {
+  document.body.classList.add('dark-mode');
+  icon.classList.remove('fa-moon');
+  icon.classList.add('fa-sun');
+}
+
+toggleButton.addEventListener('click', function() {
+  document.body.classList.toggle('dark-mode');
+
+  if (document.body.classList.contains('dark-mode')) {
+    icon.classList.remove('fa-moon');
+    icon.classList.add('fa-sun');
+    localStorage.setItem('theme', 'dark');
+  } else {
+    icon.classList.remove('fa-sun');
+    icon.classList.add('fa-moon');
+    localStorage.setItem('theme', 'light');
+  }
+});
+
 
 btn.addEventListener("click", () => {
   let present = parseInt(presentInput.value);
